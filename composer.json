@@ -1,0 +1,79 @@
+{
+  "name": "longquan/easy-umspay",
+  "description": "银联商务UMS支付PHP SDK - 支持自助签约和新购物车支付",
+  "type": "library",
+  "keywords": [
+    "ums",
+    "payment",
+    "unionpay",
+    "chinaums",
+    "sdk",
+    "php"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Lonquan",
+      "email": "root@antcool.com"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/lonquan/easy-umspay/issues",
+    "source": "https://github.com/lonquan/easy-umspay",
+    "docs": "https://github.com/lonquan/easy-umspay/blob/master/README.md"
+  },
+  "require": {
+    "php": "^8.4",
+    "ext-fileinfo": "*",
+    "ext-openssl": "*",
+    "symfony/http-client": "^8.1.12",
+    "monolog/monolog": "^3.0",
+    "psr/log": "^2.0 || ^3.0"
+  },
+  "require-dev": {
+    "laravel/pint": "^1.26",
+    "pestphp/pest": "^4.1",
+    "phpstan/phpstan": "^2.1.41",
+    "vlucas/phpdotenv": "^5.6.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "EasyUmsPay\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "EasyUmsPay\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "pest --colors=always",
+    "test:unit": "pest --colors=always tests/Unit",
+    "test:feature": "pest --colors=always tests/Feature",
+    "test:coverage": "pest --colors=always --coverage --coverage-html=build/coverage",
+    "phpstan": "phpstan analyse --ansi --memory-limit=-1",
+    "check-style": "pint --test --ansi",
+    "fix-style": "pint --ansi",
+    "check": [
+      "@check-style",
+      "@phpstan",
+      "@test"
+    ],
+    "fix": [
+      "@fix-style"
+    ]
+  },
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}

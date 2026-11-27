@@ -1,0 +1,11 @@
+parameters:
+    level: 8
+    paths:
+        - src
+        - tests
+    excludePaths:
+        - vendor
+    tmpDir: .phpstan
+    ignoreErrors:
+        # Pest 测试框架的动态属性（使用 beforeEach 设置）
+        - '#Access to an undefined property (PHPUnit\\Framework\\TestCase|Pest\\PendingCalls\\TestCall)::\$(signer|secretKey|validKey|builder)\.#'

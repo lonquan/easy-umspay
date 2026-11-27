@@ -1,0 +1,14 @@
+# 控制 Composer 下载 dist 包（git archive）时的内容，
+# 保证 `composer require` 只拿到运行期需要的文件。
+/.gitattributes       export-ignore
+/.gitignore           export-ignore
+/.githooks-README.md  export-ignore
+/.idea                export-ignore
+/.phpstan             export-ignore
+/.env.example         export-ignore
+/AGENTS.md            export-ignore
+/install-git-hooks.sh export-ignore
+/phpstan.neon         export-ignore
+/pint.json            export-ignore
+/logs                 export-ignore
+/tests                export-ignore

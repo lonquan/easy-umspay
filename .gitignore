@@ -1,0 +1,41 @@
+# Dependencies
+/vendor/
+composer.lock
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Testing
+.phpunit.cache/
+.phpunit.result.cache
+build/
+coverage/
+
+# Static Analysis
+.phpstan/
+.php-cs-fixer.cache
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build artifacts
+dist/
+*.phar
+
+# Documentation sources (API reference docs)
+ums-pay-docs/
+
